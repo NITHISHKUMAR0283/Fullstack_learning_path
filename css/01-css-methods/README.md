@@ -2,6 +2,16 @@
 
 A comprehensive demonstration of the three fundamental ways to apply CSS styling to HTML elements.
 
+## 🔗 Live Demo
+[View Live Demo](https://nithishkumar0283.github.io/Fullstack_learning_path/css/01-css-methods/)
+
+## 🖼️ Visual Result
+
+![Final Outcome](./desired-outcome.png)
+
+*Three distinctly styled elements demonstrating each CSS method*
+
+
 ## 🎯 Project Overview
 
 This project showcases my understanding of CSS implementation methods through practical examples, demonstrating when and how to use each approach effectively.
@@ -9,7 +19,7 @@ This project showcases my understanding of CSS implementation methods through pr
 ## 📁 Project Structure
 
 ```
-css-methods-practice/
+01-css-methods/
 ├── index.html          # Main HTML file with all three CSS methods
 ├── styles.css          # External stylesheet for div styling
 ├── desired-outcome.png # Visual reference for the final result
@@ -75,11 +85,6 @@ css-methods-practice/
 - **ID selector** (`#para`) for internal CSS
 - **Inline styles** for direct element styling
 
-## 🖼️ Visual Result
-
-![Final Outcome](./desired-outcome.png)
-
-*Three distinctly styled elements demonstrating each CSS method*
 
 ## 🧠 Key Learning Points
 
@@ -108,9 +113,6 @@ css-methods-practice/
 - CSS3
 - Basic CSS properties: `background-color`, `color`, `font-size`, `text-align`, `font-weight`
 
-## 🔗 Live Demo
-
-[View Live Demo](https://yourusername.github.io/repository-name) *(Update with your GitHub Pages URL)*
 
 ## 📚 Skills Demonstrated
 
