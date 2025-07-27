@@ -19,15 +19,13 @@ This project helps you master the **CSS descendant combinator**, understand **hi
 
 ## 📁 Project Structure
 
+```
 06-cascade-fix/
-├── index.html # HTML file with nested element structure
-├── style.css # CSS file demonstrating descendant combinators
-├── desired-outcome.png # Visual reference for the final result
-└── README.md # Project documentation
-
-php-template
-Copy
-Edit
+├── index.html           # HTML file with nested element structure
+├── style.css            # CSS file demonstrating descendant combinators
+├── desired-outcome.png  # Visual reference for the final result
+└── README.md            # Project documentation
+```
 
 ---
 
@@ -45,84 +43,99 @@ Edit
   <p class="text">This should be styled.</p>
   <p class="text">This should be styled.</p>
 </div>
-✅ CSS Styling Rules
-css
-Copy
-Edit
+```
+
+### ✅ CSS Styling Rules
+
+```css
 .container .text {
   background-color: yellow;
   color: red;
   font-size: 20px;
   text-align: center;
 }
-💡 This selector ensures only the .text elements inside .container are styled.
+```
 
-🧠 Key Concepts Demonstrated
-🔹 CSS Descendant Combinator ( . )
-Targets elements nested inside other elements
+💡 This selector ensures **only** the `.text` elements **inside `.container`** are styled.
 
-Works at any depth, not just direct children
+---
 
-Enables precise contextual styling
+## 🧠 Key Concepts Demonstrated
 
-🔹 Selector Hierarchy
-Element Type	Selector
-Ancestor	.container
-Descendant	.text
-Combinator	Space ( )
+### 🔹 CSS Descendant Combinator (` `)
 
-🔹 Specificity
-.container .text → Specificity: 0-2-0
+* Targets elements nested inside other elements
+* Works at any depth, not just direct children
+* Enables precise contextual styling
 
-More specific than just .text
+### 🔹 Selector Hierarchy
 
-📘 Comparisons
-Combinator	Example	Behavior
-Descendant	.parent .child	Any level of nesting
-Child	.parent > .child	Direct child only
-Adjacent Sibling	.el + .sib	Immediate next sibling
-General Sibling	.el ~ .sib	All following siblings
+| Element Type | Selector     |
+| ------------ | ------------ |
+| Ancestor     | `.container` |
+| Descendant   | `.text`      |
+| Combinator   | Space (` `)  |
 
-🛠️ Technologies Used
-HTML5
+### 🔹 Specificity
 
-CSS3
+* `.container .text` → Specificity: **0-2-0**
+* More specific than `.text` alone
 
-CSS Descendant Combinators
+---
 
-Class Selectors
+## 📘 Combinator Comparisons
 
-Basic Text Styling
+| Combinator       | Example            | Behavior               |
+| ---------------- | ------------------ | ---------------------- |
+| Descendant       | `.parent .child`   | Any level of nesting   |
+| Child            | `.parent > .child` | Direct child only      |
+| Adjacent Sibling | `.el + .sib`       | Immediate next sibling |
+| General Sibling  | `.el ~ .sib`       | All following siblings |
 
-📚 Skills Demonstrated
-Advanced selector relationships
+---
 
-DOM tree awareness
+## 🛠️ Technologies Used
 
-Contextual styling
+* HTML5
+* CSS3
+* CSS Descendant Combinators
+* Class Selectors
+* Basic Text Styling
 
-Specificity calculation
+---
 
-Clean, maintainable CSS
+## 📚 Skills Demonstrated
 
-✅ Self-Check
- Paragraphs inside .container are styled
+* Advanced selector relationships
+* DOM tree awareness
+* Contextual styling
+* Specificity calculation
+* Clean, maintainable CSS
 
- Paragraphs outside .container remain unstyled
+---
 
- CSS uses descendant combinator syntax
+## ✅ Self-Check
 
-✨ Styling Reference
-Property	Value
-Background Color	yellow
-Text Color	red
-Font Size	20px
-Text Alignment	center
+* [x] Paragraphs inside `.container` are styled
+* [x] Paragraphs outside `.container` remain unstyled
+* [x] CSS uses descendant combinator syntax
 
-🧠 DOM Tree Visualization
-css
-Copy
-Edit
+---
+
+## ✨ Styling Reference
+
+| Property         | Value  |
+| ---------------- | ------ |
+| Background Color | yellow |
+| Text Color       | red    |
+| Font Size        | 20px   |
+| Text Alignment   | center |
+
+---
+
+## 🧠 DOM Tree Visualization
+
+```
 body
 ├── div.container
 │   └── p.text (✅ STYLED)
@@ -131,22 +144,27 @@ body
 └── div.container
     ├── p.text (✅ STYLED)
     └── p.text (✅ STYLED)
-🧩 Real-World Applications
-Style <a> tags only inside nav
+```
 
-Apply styles to .card .content inside cards
+---
 
-Different sidebar and main content styles
+## 🧩 Real-World Applications
 
-Scoped modal component styles
+* Style `<a>` tags only inside `nav`
+* Apply styles to `.card .content` inside cards
+* Different sidebar and main content styles
+* Scoped modal component styles
 
-✅ Best Practices
-Use combinators for contextual styling
+---
 
-Avoid deep nesting for readability
+## ✅ Best Practices
 
-Balance specificity to prevent style conflicts
+* Use combinators for contextual styling
+* Avoid deep nesting for readability
+* Balance specificity to prevent conflicts
 
-🚀 Learning Journey
-Part of my daily web development learning journey — mastering CSS fundamentals one concept at a time.
+---
 
+## 🚀 Learning Journey
+
+Part of my daily **web development learning journey** — mastering CSS fundamentals one concept at a time.
