@@ -1,3 +1,6 @@
+ # live url 
+ [live demo](https://nithishkumar0283.github.io/Fullstack_learning_path/js/practicing/)
+
 # Dynamic Dropdown Project
 
 Simple JavaScript practice project where I learned to create HTML elements dynamically using DOM manipulation.
