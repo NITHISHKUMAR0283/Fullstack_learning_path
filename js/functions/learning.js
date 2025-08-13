@@ -154,3 +154,50 @@ console.log(filtered)
 
 /*reduce - executes reducer call back 
 and return accumulated result*/
+let cost = [45, 152, 89, 234, 67, 301, 23, 178, 92, 456];
+
+let total=cost.reduce(funct,9000)//initial value
+function funct(total,ele){//we can also get the index, arr parameter
+    return total+ele
+}
+console.log(total)//10637
+
+let letters2D = [
+    ['A', 'M', 'K', 'P', 'R'],
+    ['B', 'N', 'L', 'Q', 'S'],
+    ['C', 'O', 'H', 'T', 'U'],
+    ['D', 'F', 'I', 'V', 'W'],
+    ['E', 'G', 'J', 'X', 'Y']
+];
+
+console.log(letters2D.flat())//returns the 1d array of given dimention array
+
+let count=letters2D.flat().reduce((accumulator, current)=>{
+    if (accumulator[current]){
+        accumulator[current]++}
+    else {
+        accumulator[current]=1
+    }
+    return accumulator    
+},{})
+console.log(count)
+
+//remove duplicate using reduce()
+arr=[4,6,2,3,1,1,3,5,7,8,4,3]
+let unique=arr.reduce((uni,curret)=>{
+    if (!uni.includes(curret)){
+        uni.push(curret)    }
+    return uni
+
+},[])
+console.log(unique)// [4, 6, 2, 3, 1, 5, 7, 8]
+
+//abbreviate by gathering first letter of each word
+let Name="robert Andrew George"
+let words=Name.split(" ")
+let first_letters=words.reduce((arr,current)=>{
+    arr+=current[0].toUpperCase()
+    return arr
+
+},'')
+console.log(first_letters)//RAG
