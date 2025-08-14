@@ -85,3 +85,19 @@ function displayentries() {
         list.appendChild(li);
     });
 }
+let filter=document.getElementById('filterby')
+filter.addEventListener("change",get)
+function get(){
+let index=filter.selectedIndex
+let choice =filter.options[index].value;
+
+formEntries.forEach(obj=>{
+    if (obj && choice in obj){
+        console.log(obj[choice])
+    }
+    else{
+        console.log("not found")
+    }
+}
+)
+}
