@@ -16,7 +16,7 @@
     
     <h2>Date:13-08-2025</h2>
     <h2 id="expense_heading"> Creating a Expense Tracker which have functionalities like filter and search analytics ,monthly overview, expenses by category ,transaction history</h2>
-    <div id="form">
+    <form id="form">
         <div id="form-div">
             
         <label for="text">Description</label>
@@ -37,16 +37,18 @@
         </div>
         <div id="form-div">
             <label for="date">Date</label>
-            <input type="date">
+            <input type="date" id="date">
         </div>
         <div id="form-div">
             <label for="text_input">Notes(optional)</label>
             <input type="text"id="text_input" placeholder="Additional notes">
 
         </div>
-        
-    </div>
+        <div id="submit">
+        <button >Add Expense</button></div>
+        </form>
     
+    <ul id="entriesList"></ul>
     
     <script src="script.js"></script>
 </body>

@@ -1,6 +1,5 @@
 let select=document.createElement('select')
 let body=document.querySelector('#dropdown')
-console.log(body)
 body.appendChild(select)
 select.className="selector"
 let array=['ECE','CSE','MECHANICAL','AEROSPACE']
@@ -41,6 +40,48 @@ div_category.id='form-div'
 
 div_category.appendChild(categrory_label)
 div_category.appendChild(category_select)
-console.log(div_category)
 document.querySelector('#form-div:nth-child(3)').insertAdjacentElement('afterend',div_category)
-console.log(category_select)
+class Form {
+    constructor(description, amount, type, cat, date, notes) {
+        this.description = description;
+        this.amount = amount;
+        this.type = type;
+        this.date = date;
+        this.notes = notes;
+        this.categ = cat;
+    }
+    get() {
+        return `${this.description} - ${this.amount} - ${this.type} - ${this.categ} - ${this.date} - ${this.notes}`;
+    }
+}
+
+const formEntries = [];
+
+function add_details(event) {
+    event.preventDefault();
+
+    const description = document.getElementById("text").value;
+    const amount = parseFloat(document.getElementById("amount").value);
+    const category1 = document.getElementById("category_select").value;
+    const type = document.getElementById("selector").value;
+    const date = document.getElementById("date").value;
+    const notes = document.getElementById("text_input").value;
+
+    const newentry = new Form(description, amount, type, category1, date, notes);
+    formEntries.push(newentry);
+
+    displayentries();
+    document.getElementById('form').reset(); // clear form after submit
+}
+
+document.getElementById('form').addEventListener('submit', add_details);
+
+function displayentries() {
+    const list = document.getElementById("entriesList");
+    list.innerHTML = "";
+    formEntries.forEach((entry) => {
+        const li = document.createElement('li');
+        li.textContent = entry.get();
+        list.appendChild(li);
+    });
+}
