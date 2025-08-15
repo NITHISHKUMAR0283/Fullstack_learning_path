@@ -1,4 +1,5 @@
 body{
+    
     display:flex;
     flex-direction: column;
     
@@ -22,7 +23,7 @@ body{
     display:flex;
     justify-content: center;
 }
-#form button,#filterby{
+#form button,#filterby,#showexpense{
     padding: 10px;
     font-size:medium;
     font-weight: 500;
@@ -33,6 +34,8 @@ body{
     border: 2px solid black;
     border-radius: 5px;
     background-color: rgb(24, 163, 33);
+    margin: 10px;
+
 }
 
 #form{
@@ -79,11 +82,32 @@ body{
     margin-right: 20px;
     text-align: center;
 }
-#entriesList{
-    background-color: brown;
-}
 #functionalities{
     display:flex;
     justify-content:space-around;
+    flex-flow:wrap;
 
 }
+#show{
+    background-color: blanchedalmond;
+    
+    border-collapse: collapse;
+    border:2px solid black;   
+    
+     border-radius: 5px;
+     width: 100%;
+
+}
+td,th{
+    
+    text-align: center;
+    padding:10px;
+    border-collapse: collapse;
+    border-right:2px solid black;
+    border-bottom: 2px solid black;
+}
+#table_c{
+    display: flex;
+    background-color: brown;
+    
+    }

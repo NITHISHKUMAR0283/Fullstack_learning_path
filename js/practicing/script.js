@@ -51,7 +51,7 @@ class Form {
         this.categ = cat;
     }
     get() {
-        return `${this.description} - ${this.amount} - ${this.type} - ${this.categ} - ${this.date} - ${this.notes}`;
+        return `${this.description}--${this.amount}--${this.type}--${this.categ}--${this.date}--${this.notes}`;
     }
 }
 
@@ -69,35 +69,61 @@ function add_details(event) {
 
     const newentry = new Form(description, amount, type, category1, date, notes);
     formEntries.push(newentry);
-
-    displayentries();
+    displaydetails()
     document.getElementById('form').reset(); // clear form after submit
+}
+
+function displaydetails(){
+     formEntries.forEach(obj1=>{
+})
 }
 
 document.getElementById('form').addEventListener('submit', add_details);
 
-function displayentries() {
-    const list = document.getElementById("entriesList");
-    list.innerHTML = "";
-    formEntries.forEach((entry) => {
-        const li = document.createElement('li');
-        li.textContent = entry.get();
-        list.appendChild(li);
-    });
-}
 let filter=document.getElementById('filterby')
-filter.addEventListener("change",get)
-function get(){
-let index=filter.selectedIndex
-let choice =filter.options[index].value;
 
-formEntries.forEach(obj=>{
-    if (obj && choice in obj){
-        console.log(obj[choice])
-    }
-    else{
-        console.log("not found")
-    }
-}
-)
-}
+let showexpense=document.getElementById('showexpense')
+
+showexpense.addEventListener('click',display=>{
+    let exsistingtable=document.getElementById("show")
+     if(exsistingtable){
+                exsistingtable.remove();
+            }
+    let table=document.createElement("table")
+    table.id="show"
+    let tableh=document.createElement("tr")
+    let heading=[
+    "Description",
+    "Amount",
+    "Type",
+    "Category",
+    "Date",
+    "Notes"
+]   
+    heading.forEach(head => {
+            
+            let tablehead=document.createElement("th")
+            tablehead.textContent=head
+            tableh.appendChild(tablehead)
+
+    
+});
+table.appendChild(tableh)
+    formEntries.forEach(obj=>{
+       
+        let inputstring=obj.get()
+        let dataarr=inputstring.split("--")
+        let tr=document.createElement("tr")
+        dataarr.forEach(d=>{
+            
+        let td=document.createElement("td")
+        td.textContent=d
+        tr.appendChild(td)}
+
+        )
+        table.appendChild(tr)
+
+
+    })
+    document.getElementById('table_c').appendChild(table)
+})
