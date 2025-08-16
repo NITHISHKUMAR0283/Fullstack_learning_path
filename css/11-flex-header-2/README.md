@@ -6,7 +6,7 @@ For this one you will probably need to edit the HTML a little bit. Often with fl
 
 ## live url:
 [live demo](https://nithishkumar0283.github.io/Fullstack_learning_path/css/11-flex-header-2/)
-## Before flex:
+## output:
 ![before](./image.png)
 
 ## Desired outcome
